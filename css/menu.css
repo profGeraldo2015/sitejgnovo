@@ -1,0 +1,432 @@
+/**
+ * Menu.js
+ * @version 0.1.0
+ * @see https://github.com/brunocarvalhodearaujo/full-menu
+ * @author Bruno Carvalho de Araujo <carvalho@hostnet.com.br>
+ * @licence MIT
+ * @generatedAt Thu Oct 22 2015 11:36:11 GMT-0200 (BRST)
+ */
+
+.no-scroll {
+    overflow: hidden;
+    overflow-x: hidden;
+}
+
+.fixed {
+    position:fixed !important;
+}
+
+.hide{
+    display: none;
+}
+
+.locked {
+    overflow-y: hidden;
+    height:100vh;
+    position: fixed;
+}
+
+#siteTopo #siteMenu {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#siteMenu a {
+    margin: 0px 0px 30px 0px;
+    line-height: 32px;
+}
+
+@media only screen and (min-device-width : 768px) and (orientation : landscape) {
+    #siteMenu a {
+        line-height: 52px;
+    }
+}
+
+// Retina iPad in portrait
+@media only screen and (min-device-width: 768px) and (orientation : portrait) {
+    #siteMenu a {
+        line-height: 46px;
+        background-color: red;
+    }
+}
+
+.nav-toggle {
+    z-index: 999;
+    width: 35px;
+    height: 45px;
+    position: absolute;
+    left: 14px;
+    top: 3px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.4s ease-in-out;
+    -moz-transition: 0.4s ease-in-out;
+    -o-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+}
+.nav-toggle span {
+    display: block;
+    position: absolute;
+    height: 6px;
+    width: 100%;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+}
+.nav-toggle span:nth-child(1) {
+    top: 15px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+}
+.nav-toggle span:nth-child(2) {
+    top: 25px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+}
+.nav-toggle span:nth-child(3) {
+    top: 35px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+}
+.nav-toggle.open span:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 15px;
+    left: 8px;
+}
+.nav-toggle.open span:nth-child(2) {
+    width: 0%;
+    opacity: 0;
+}
+.nav-toggle.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 40px;
+    left: 8px;
+}
+body.lock {
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+}
+.uiMenu {
+    /*font-family: 'Open Sans', Helvetica, Arial, sans-serif;*/
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    overflow: overlay;
+    position: fixed;
+    opacity: 0.95;
+}
+.uiMenu.isHide {
+    display: none;
+}
+.uiMenu > .close {
+    position: fixed;
+    left: 25px;
+    top: 15px;
+}
+.uiMenu > .close a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 35px;
+    color: #ffffff;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+.uiMenu > .close a :hover :focus {
+    color: #ffffff;
+}
+.uiMenu > .content {
+    padding-top: 100px;
+    text-align: center;
+}
+.uiMenu > .content::-webkit-scrollbar {
+    display: none;
+}
+.uiMenu > .content a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 35px;
+    color: #ffffff;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+.uiMenu > .content a :hover :focus {
+    color: #ffffff;
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    .uiMenu > .content {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        line-height: 50px;
+    }
+    .uiMenu > .content a {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 50px;
+        color: #ffffff;
+        -webkit-transition: color 0.2s;
+        transition: color 0.2s;
+        padding: 20px;
+    }
+    .uiMenu > .content a :hover :focus {
+        color: #ffffff;
+    }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    .uiMenu > .content {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        line-height: 50px;
+    }
+    .uiMenu > .content a {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 50px;
+        color: #ffffff;
+        -webkit-transition: color 0.2s;
+        transition: color 0.2s;
+        padding: 20px;
+    }
+    .uiMenu > .content a :hover :focus {
+        color: #ffffff;
+    }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    .uiMenu > .content {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        line-height: 50px;
+    }
+    .uiMenu > .content a {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 50px;
+        color: #ffffff;
+        -webkit-transition: color 0.2s;
+        transition: color 0.2s;
+        padding: 20px;
+    }
+    .uiMenu > .content a :hover :focus {
+        color: #ffffff;
+    }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+
+    #siteMenu a {
+        line-height: 46px;
+    }
+    .uiMenu > .content {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        line-height: 50px;
+    }
+    .uiMenu > .content a {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 50px;
+        color: #ffffff;
+        -webkit-transition: color 0.2s;
+        transition: color 0.2s;
+        padding: 20px;
+    }
+    .uiMenu > .content a :hover :focus {
+        color: #ffffff;
+    }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) {
+    .uiMenu > .content {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        line-height: 50px;
+    }
+    .uiMenu > .content a {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 30px;
+        color: #ffffff;
+        -webkit-transition: color 0.2s;
+        transition: color 0.2s;
+        padding: 0px;
+    }
+    .uiMenu > .content a :hover :focus {
+        color: #ffffff;
+    }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
+    .uiMenu > .content {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        line-height: 50px;
+    }
+    .uiMenu > .content a {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 30px;
+        color: #ffffff;
+        -webkit-transition: color 0.2s;
+        transition: color 0.2s;
+        padding: 0px;
+    }
+    .uiMenu > .content a :hover :focus {
+        color: #ffffff;
+    }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
+    .uiMenu > .content {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        line-height: 50px;
+    }
+    .uiMenu > .content a {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 30px;
+        color: #ffffff;
+        -webkit-transition: color 0.2s;
+        transition: color 0.2s;
+        padding: 0px;
+    }
+    .uiMenu > .content a :hover :focus {
+        color: #ffffff;
+    }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
+    .uiMenu > .content {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        line-height: 50px;
+    }
+    .uiMenu > .content a {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 30px;
+        color: #ffffff;
+        -webkit-transition: color 0.2s;
+        transition: color 0.2s;
+        padding: 0px;
+    }
+    .uiMenu > .content a :hover :focus {
+        color: #ffffff;
+    }
+}
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
+    .uiMenu > .content {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        line-height: 50px;
+    }
+    .uiMenu > .content a {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 30px;
+        color: #ffffff;
+        -webkit-transition: color 0.2s;
+        transition: color 0.2s;
+        padding: 0px;
+    }
+    .uiMenu > .content a :hover :focus {
+        color: #ffffff;
+    }
+}
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {
+    .uiMenu > .content {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        line-height: 50px;
+    }
+    .uiMenu > .content a {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 30px;
+        color: #ffffff;
+        -webkit-transition: color 0.2s;
+        transition: color 0.2s;
+        padding: 0px;
+    }
+    .uiMenu > .content a :hover :focus {
+        color: #ffffff;
+    }
+}
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: portrait) {
+    .uiMenu > .content {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        line-height: 50px;
+    }
+    .uiMenu > .content a {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 30px;
+        color: #ffffff;
+        -webkit-transition: color 0.2s;
+        transition: color 0.2s;
+        padding: 0px;
+    }
+    .uiMenu > .content a :hover :focus {
+        color: #ffffff;
+    }
+}
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: landscape) {
+    .uiMenu > .content {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        line-height: 50px;
+    }
+    .uiMenu > .content a {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 30px;
+        color: #ffffff;
+        -webkit-transition: color 0.2s;
+        transition: color 0.2s;
+        padding: 0px;
+    }
+    .uiMenu > .content a :hover :focus {
+        color: #ffffff;
+    }
+}
+.uiMenu .social {
+    padding-top: 30px;
+}
+.uiMenu .social a {
+    padding: 0px;
+    margin: 0px;
+}
+.uiMenu .social a i {
+    font-size: 50px;
+    padding: 20px;
+}
+.uiMenu .center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
