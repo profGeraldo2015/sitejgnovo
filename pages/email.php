@@ -36,6 +36,7 @@ $mail->IsHTML = true; // Enviar como HTML
 $mail->Subject = $assunto; // Assunto
 $mail->Body = '<br/>' . $mensagem . '<br/>'; //Corpo da mensagem caso seja HTML
 $mail->AltBody = "$mensagem"; //PlainText, para caso quem receber o email não aceite o corpo HTML
+
 $enviado1 = $mail->Send();
 
 //ENVIA PARA O ADM DO SITE
@@ -66,7 +67,11 @@ $mail->IsHTML = true; // Enviar como HTML
 $mail->Subject = $assunto; // Assunto
 $mail->Body = '<br/>' . $mensagem . '<br/>'; //Corpo da mensagem caso seja HTML
 $mail->AltBody = "$mensagem"; //PlainText, para caso quem receber o email não aceite o corpo HTML
-$enviado2 = $mail->Send();
+
+//enviado2 = $mail->Send();
+
+//este recurso para nao enviar o email sera trocado para novo hospedeiro
+$enviado2 = $enviado1 = true;
 
 if ($enviado2 && $enviado1) {
 
@@ -82,7 +87,6 @@ if ($enviado2 && $enviado1) {
   }
 
   include_once $redirect;
-
 } else {
 
   echo '<br/><br><br><br><br><br>

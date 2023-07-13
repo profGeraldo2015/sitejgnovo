@@ -9,7 +9,7 @@ $cep_destino = trim($_POST['cep_destino']);
 //echo $cep_destino;
 
 //exit();
-function calcula_frete($cep_origem, $cep_destino, $peso, $valor, $tipo_frete, $altura = 25, $largura = 45, $comprimento = 95) {
+function calcula_frete($cep_origem, $cep_destino, $peso, $valor, $tipo_frete, $altura = 25, $largura = 50, $comprimento = 98) {
 
     $url = "http://ws.correios.com.br/calculador/CalcPrecoPrazo.aspx?";
     $url .= "&nCdEmpresa=";
@@ -38,7 +38,7 @@ function calcula_frete($cep_origem, $cep_destino, $peso, $valor, $tipo_frete, $a
   print_r(calcula_frete('14802175', '68925207', 5, 2000, '41106'));
   echo '</pre>'; */
 
-$dados = calcula_frete('18273057', $cep_destino, 12, 0, '41106');
+$dados = calcula_frete('18273057', $cep_destino, 10, 0, '41106');
 
 //echo "R$ ". number_format($dados->Valor,2,",",".");
 echo $dados->Valor;

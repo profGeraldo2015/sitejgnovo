@@ -7,11 +7,19 @@ $senha = mysqli_real_escape_string($conex, $_POST['senha']);
 //echo "<h1>" . $usuario." " . $senha ."</h1>";
 //if(password_verify($senha, $row_usuario['senha']);
 //implementar verificacao de senha 
-$query = "SELECT * from usuarios where usuario like '$usuario' and senha like '$senha' and status like 1 limit 1";
+
+$query = "SELECT * from usuarios where email like '$usuario' and senha like '$senha' and status like 1 limit 1";
+
 $resultado = mysqli_query($conex, $query);
+
 $dados = mysqli_fetch_assoc($resultado);
+
+echo '<pre>';
+echo var_dump($dados);
+echo '</pre>';
+
 //echo '<pre>';
-//echo var_dump($dados);
+//echo var_dump($resultado);
 //echo '</pre>';
 //die;
 if (empty($dados)) {
@@ -21,6 +29,7 @@ if (empty($dados)) {
     echo '<script>window.location ="login22.php"</script>';
 }elseif (isset($dados)) {
     unset($_SESSION['usuario']);
+
     $_SESSION['usuario'] = $dados['nome'];
     //header('Location: ./validado.php');
     //echo $_SESSION['usuario'];

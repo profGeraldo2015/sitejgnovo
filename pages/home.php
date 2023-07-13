@@ -11,9 +11,9 @@ require_once("pages/carousel.html");
 	<div class="row">
 		<div class="col-sm-6" align="center">
 			<div class="card" style="width: 18rem;">
-				<img class="card-img-top" src="./images/diretor2.jpg" class="img-responsive" style="width: 100%" alt="Cadeira diretor">
 				<div class="card-body">
-					<h5 class="card-title">Poltrona DIRETOR</h5>
+					<img class="card-img-top" src="./images/diretor2.jpg" class="img-responsive" style="width: 200%" alt="Cadeira diretor">
+					<h4 class="card-title">DIRETOR</h4>
 					<p class="card-text">Cadeira estilo diretor feita de madeira de demolição, altura do piso ao assento 45 cm</p>
 					<a href="https://www.elo7.com.br/poltrona-diretor-de-cinema/dp/951766?utm_source=blog&utm_medium=product_button" title="Comprar este produto"><img src="https://images.elo7.com.br/assets/v3/desktop/png/loja/btn-divulgacao-comprar.png" alt="Comprar este produto"></a>
 					<!--
@@ -32,8 +32,8 @@ require_once("pages/carousel.html");
 		<div class="col-sm-6" align="center">
 			<div class="card" style="width: 18rem;">
 				<div class="card-body">
-					<img src="images/c-maquiador_InPixio.jpg" class="img-responsive" style="width:80%" alt="Maquiador">
-					<h5 class="card-title">Poltrona Maquiador</h5>
+					<img src="images/c-maquiador_InPixio.jpg" class="img-responsive" style="width:300%" alt="Maquiador">
+					<h4 class="card-title">Maquiador</h4>
 					<p class="card-text">Cadeira estilo diretor para maquiador, altura do piso ao assento 77 cm</p>
 					<a href='https://www.elo7.com.br/poltrona-diretor-de-cinema-maquiador/dp/B3F862?utm_source=blog&utm_medium=product_button'>
 						<img src='https://images.elo7.com.br/assets/v3/desktop/png/loja/btn-divulgacao-comprar.png' alt='Comprar este produto'></a>

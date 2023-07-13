@@ -7,13 +7,13 @@ $producao = SITE['DB'];
 if($producao){
 
     //producao kinghost
-    $host = "mysql.jgartdesign.com.br";
+    $host = "localhost";
 
-    $user = "jgartdesign"; 
+    $user = "id20684822_userjgartdesign"; 
 
-    $senha = "dbsitejg2020";
+    $senha = "BJ}^2R!l\*m9Z{r}";
 
-    $banco = "jgartdesign"; 
+    $banco = "id20684822_jgartdesign"; 
 
 }else{
 
@@ -22,16 +22,16 @@ if($producao){
 
     $user = "root"; 
 
-    $senha = ""; 
+    $senha = "root"; 
 
-    $banco = "sc";
+    $banco = "scnovo2021";
 }
 
 $conex = new mysqli($host, $user, $senha, $banco);
 
 if($conex->connect_error)
 
-    die('Falha na conexão: ' . $conex->connect_error);
+//    die('Falha na conexão: 2023' . $conex->connect_error);
 
 //else print("Conectado. JG isto é que é developer!!!");    
     

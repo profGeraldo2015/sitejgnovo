@@ -9,11 +9,12 @@ include("./PHPMailer/class.smtp.php");
 $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
 $usuario = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
 $cusuario = filter_input(INPUT_POST, 'cemail', FILTER_SANITIZE_STRING);
-
 $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
+
 $criado_em = date('Y-m-d H:i:s');
 $IP = $_SERVER['REMOTE_ADDR'];
 $status = 0;
+
 if($usuario != $cusuario):
     $_SESSION['loginErro'] = "E-mail´s não conferem...";
     echo "<script>location.href='login22.php'</script>";
@@ -25,7 +26,7 @@ endif;
 //acertar validação quando já existe
 //$result_usuario = "SELECT id, nome, email, senha FROM usuarios WHERE usuario='$usuario' LIMIT 1";
 //$result_usuario = "select * from usuarios where usuario like '$usuario' and senha like '$senha' limit 1";
-$result_usuario = "SELECT * from usuarios where usuario like '$usuario' limit 1";
+$result_usuario = "SELECT * from usuarios where email like '$usuario' limit 1";
 
 $resultado_usuario = mysqli_query($conex, $result_usuario);
 //var_dump($resultado_usuario);

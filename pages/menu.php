@@ -50,7 +50,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.instagram.com/jgartedesign/" title="Confira nossa página no Instagram">
+                    <a href="https://www.instagram.com/jgartedesign/" title="Confira nossa página no Instagram" target="_blank">
                         <span class="fa fa-instagram" style="font-size:35px"></span>
                     </a>
                 </li>
@@ -65,7 +65,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <?php
-                                       if (!isset($_SESSION['usuario'])) {
+                    if (!isset($_SESSION['usuario'])) {
                     ?>
                         <a href="./login22.php"><span class="glyphicon glyphicon-log-in"></span>Login</a>
                     <?php
@@ -74,7 +74,8 @@
                         <a href="deslogar.php"><span class="glyphicon glyphicon-log-in"></span>Logout</a>
                     <?php
                     }
-                    ?></li>
+                    ?>
+                    </li>
             </ul>
         </div>
     </div>

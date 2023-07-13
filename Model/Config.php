@@ -2,7 +2,7 @@
 
 define("SITE", [
     "nome"           => "Two Brothers Development WEB ©",
-    "emailcontact"   => "contato@jgartdesign.com.br",
+    "emailcontact"   => "jgartdesign2017@gmail.com",
     "DB"             => false,
 
     "quemsomos" => "<blockquote><p>Trabalhamos criando peças artesanais com qualidade e acabamento de bom gosto.</p>
